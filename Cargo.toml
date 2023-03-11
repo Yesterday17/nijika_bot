@@ -1,0 +1,21 @@
+[package]
+name = "nijika"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+teloxide = { version = "0.12", features = ["macros"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+
+tokio = { version = "1.8", features = ["rt-multi-thread", "macros"] }
+reqwest = { version = "0.11.14", default-features = false, features = [
+    "json",
+    "rustls",
+] }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.94"
+anyhow = "1.0"
+telegraph-rs = "0.5.0"
+once_cell = "1.17.1"
